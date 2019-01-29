@@ -5,9 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.kotlin.some_extensions.AlertButtonsCallback
 import com.kotlin.some_extensions.checkNetworkConnectivity
-import com.kotlin.some_extensions.navigate
 import com.kotlin.some_extensions.showAlertDialog
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         showAlertDialog("Title", "Message", "OK", "Cancel",
             object : AlertButtonsCallback {
                 override fun pressedButton(btn: String) {
-                    showToast(btn)
+                    showToast("You Pressed :: " + btn)
                 }
             })
     }
