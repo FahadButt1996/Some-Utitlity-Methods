@@ -67,7 +67,7 @@ fun Activity.dismissDialog() {
 fun Activity.shareApp(subject: String, share_text: String) {
     val intent = Intent(Intent.ACTION_SEND)
     intent.setType("text/plain")
-    intent.putExtra(Intent.EXTRA_SUBJECT, "subject changed")
+    intent.putExtra(Intent.EXTRA_SUBJECT, "subject changed with bazaid")
     intent.putExtra(Intent.EXTRA_TEXT, share_text)
     startActivity(Intent.createChooser(intent, "Please select"))
 }
